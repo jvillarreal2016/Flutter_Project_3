@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_project3/screens/filters_screen.dart';
 import './screens/tabs_screen.dart';
 import './screens/meals_detail_screen.dart';
 import './screens/categories_screen.dart';
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'Deli Meals',
       theme: ThemeData(
         primarySwatch: Colors.pink,
-        accentColor: Colors.amber,
+        // colorScheme: Colors.amber,
         canvasColor: Color.fromRGBO(255, 254, 229, 1),
         fontFamily: 'Raleway',
         textTheme: ThemeData.light().textTheme.copyWith(
@@ -36,6 +37,7 @@ class MyApp extends StatelessWidget {
         '/': (ctx) => TabScreen(),
         CategoryMealsScreen.routeName: (ctx) => CategoryMealsScreen(),
         MealDetailScreen.routeName: (ctx) => MealDetailScreen(),
+        FiltersScreen.routeName: (ctx) => FiltersScreen(),
       },
       onUnknownRoute: (settings) {
         return MaterialPageRoute(builder: (ctx) => CategoriesScreen());
